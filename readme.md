@@ -28,3 +28,15 @@ Note: Do keep a check on update on reload cuz service worker is like nextjs, som
 Let me give you a whitepill moment, you can have multiple service workers running actually
 - Since there are many many folders, you don't need to create a service worker on a root level, you can create it on a folder level as well
 - You can define a scope of service worker, by default it takes root
+
+# PWAs ( Progressive Web Apps )
+How to know the website is PWA? There is an option to install the app in the url tab
+Another whitepill moment is that mdn website itself is a PWA
+
+- You need a manifest.json file actually to enable your website to be used as a PWA
+- To generate a manifest.json file, you could go to any website to generate it for you
+- Then copy the downloaded icons n manifest.json file into your app
+- Link your manifest.json into your root html file. 
+- You should check in application tab of lighthouse if your manifest folder is correctly loaded or not
+
+One last whitepill. You know all those lite apps like "Flipkart lite"? Well those are all PWAs.
