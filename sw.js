@@ -18,6 +18,19 @@ self.addEventListener("install", e => {
 });
 
 self.addEventListener("activate", e => {
+    // Clean up useless cache
+    e.waitUntil(
+        caches.keys().then(keyList => {
+            // When you delete a key, it returns a promise, hence we use a promise.all to return a success once all useless keys are deleted
+            return Promise.all(
+                keyList.map(ket => {
+                    if(key!==CACHE_NAME) {
+                        return caches.delete(key);
+                    }
+                })
+            )
+        })
+    )
 
 });
 

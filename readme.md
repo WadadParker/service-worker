@@ -24,3 +24,7 @@ You need to do the following steps to integrate a service worked within your app
 - - Update the cache after resource loads
 - - If there is not network then use the cache as the fallback
 Note: Do keep a check on update on reload cuz service worker is like nextjs, sometimes old code does not get reflected
+
+Let me give you a whitepill moment, you can have multiple service workers running actually
+- Since there are many many folders, you don't need to create a service worker on a root level, you can create it on a folder level as well
+- You can define a scope of service worker, by default it takes root
